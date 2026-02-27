@@ -4,7 +4,7 @@ import { Play, Square, Activity, Users, Clock, Globe, AlertCircle, CheckCircle }
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import './App.css';
 
-const socket = io('http://localhost:5000');
+const socket = io(import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000');
 
 function App() {
   const [config, setConfig] = useState({
